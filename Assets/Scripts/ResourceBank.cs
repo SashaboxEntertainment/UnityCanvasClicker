@@ -6,19 +6,16 @@ using UnityEngine;
 public class ResourceBank : MonoBehaviour
 {
     private Dictionary<ResourceType, int> _resource;
-    private float _cooldown = 6;
 
     private void OnEnable()
     {
-        Coroutine timer = StartCoroutine(Timer(_cooldown));
-
         _resource = new Dictionary<ResourceType, int>()
         {
-            [ResourceType.FOOD] = Game.Intance.GameConfig.Food,
-            [ResourceType.HUMANS] = Game.Intance.GameConfig.Humans,
-            [ResourceType.WOOD] = Game.Intance.GameConfig.Wood,
-            [ResourceType.STONE] = Game.Intance.GameConfig.Stone,
-            [ResourceType.GOLD] = Game.Intance.GameConfig.Gold,
+            [ResourceType.FOOD] = Game.Intance.Resources,
+            [ResourceType.HUMANS] = Game.Intance.Resources,
+            [ResourceType.WOOD] = Game.Intance.Resources,
+            [ResourceType.STONE] = Game.Intance.Resources,
+            [ResourceType.GOLD] = Game.Intance.Resources,
         };
 
         if (!_resource.ContainsKey(ResourceType.FOOD) ||
@@ -45,10 +42,5 @@ public class ResourceBank : MonoBehaviour
             throw new InvalidDataException();
 
         return _resource[r];
-    }
-
-    private IEnumerator Timer(float cooldown)
-    {
-        yield return new WaitForSecondsRealtime(cooldown);
     }
 }

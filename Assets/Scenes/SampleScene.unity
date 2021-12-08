@@ -333,12 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e485135988f01e84b87fbc961a816f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameConfig: {fileID: 11400000, guid: 17985953c195e634e82fcce94d1ca53f, type: 2}
-  Humans: 10
-  Food: 5
-  Wood: 5
-  Gold: 0
-  Stone: 0
+  Resources: 0
 --- !u!4 &407484880
 Transform:
   m_ObjectHideFlags: 0

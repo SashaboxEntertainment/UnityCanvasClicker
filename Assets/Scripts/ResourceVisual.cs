@@ -14,10 +14,10 @@ public class ResourceVisual : MonoBehaviour
 
     public void UpdateText()
 	{
-        _humansText.text = $"Humans: {_game.Humans.ToString()}";
-        _foodText.text = $"Food: {_game.Food.ToString()}";
-        _woodText.text = $"Wood: {_game.Wood.ToString()}";
-        _goldText.text = $"Gold: {_game.Gold.ToString()}";
-        _stoneText.text = $"Stone: {_game.Stone.ToString()}";
+        _humansText.text = $"Humans: {_game.Resources.ToString()}";
+        _foodText.text = $"Food: {_game.Resources.ToString()}";
+        _woodText.text = $"Wood: {_game.Resources.ToString()}";
+        _goldText.text = $"Gold: {_game.Resources.ToString()}";
+        _stoneText.text = $"Stone: {_game.Resources.ToString()}";
     }
 }
