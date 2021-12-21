@@ -11,11 +11,11 @@ public class ResourceBank : MonoBehaviour
     {
         _resource = new Dictionary<ResourceType, int>()
         {
-            [ResourceType.FOOD] = Game.Intance.Resources,
-            [ResourceType.HUMANS] = Game.Intance.Resources,
-            [ResourceType.WOOD] = Game.Intance.Resources,
-            [ResourceType.STONE] = Game.Intance.Resources,
-            [ResourceType.GOLD] = Game.Intance.Resources,
+            [ResourceType.FOOD] = Game.Intance.GameConfig.Food,
+            [ResourceType.HUMANS] = Game.Intance.GameConfig.Humans,
+            [ResourceType.WOOD] = Game.Intance.GameConfig.Wood,
+            [ResourceType.STONE] = Game.Intance.GameConfig.Stone,
+            [ResourceType.GOLD] = Game.Intance.GameConfig.Gold,
         };
 
         if (!_resource.ContainsKey(ResourceType.FOOD) ||

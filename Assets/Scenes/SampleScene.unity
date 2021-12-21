@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109829283
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e485135988f01e84b87fbc961a816f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resources: 0
+  GameConfig: {fileID: 11400000, guid: 17985953c195e634e82fcce94d1ca53f, type: 2}
 --- !u!4 &407484880
 Transform:
   m_ObjectHideFlags: 0
@@ -614,14 +614,14 @@ RectTransform:
   m_GameObject: {fileID: 949414886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 1075105465}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -454.6732, y: 216}
+  m_AnchoredPosition: {x: -350, y: 75}
   m_SizeDelta: {x: 217.658, y: 131.187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949414888
@@ -734,11 +734,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _game: {fileID: 407484879}
+  _resourceType: 0
   _humansText: {fileID: 949414888}
-  _foodText: {fileID: 1751604069}
-  _woodText: {fileID: 1230590678}
-  _goldText: {fileID: 2105396963}
-  _stoneText: {fileID: 1809473070}
+  _foodText: {fileID: 0}
+  _woodText: {fileID: 0}
+  _goldText: {fileID: 0}
+  _stoneText: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,12 +871,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -955,14 +956,14 @@ RectTransform:
   m_GameObject: {fileID: 1230590675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1075105465}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 216}
+  m_AnchoredPosition: {x: 0, y: 75}
   m_SizeDelta: {x: 256.144, y: 131.187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1230590677
@@ -978,11 +979,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _game: {fileID: 407484879}
-  _humansText: {fileID: 949414888}
-  _foodText: {fileID: 1751604069}
+  _resourceType: 2
+  _humansText: {fileID: 0}
+  _foodText: {fileID: 0}
   _woodText: {fileID: 1230590678}
-  _goldText: {fileID: 2105396963}
-  _stoneText: {fileID: 1809473070}
+  _goldText: {fileID: 0}
+  _stoneText: {fileID: 0}
 --- !u!114 &1230590678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,14 +1110,14 @@ RectTransform:
   m_GameObject: {fileID: 1751604066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 1075105465}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -236.96, y: 216}
+  m_AnchoredPosition: {x: -180, y: 75}
   m_SizeDelta: {x: 217.78, y: 131.187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751604068
@@ -1131,11 +1133,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _game: {fileID: 407484879}
-  _humansText: {fileID: 949414888}
+  _resourceType: 1
+  _humansText: {fileID: 0}
   _foodText: {fileID: 1751604069}
-  _woodText: {fileID: 1230590678}
-  _goldText: {fileID: 2105396963}
-  _stoneText: {fileID: 1809473070}
+  _woodText: {fileID: 0}
+  _goldText: {fileID: 0}
+  _stoneText: {fileID: 0}
 --- !u!114 &1751604069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,14 +1264,14 @@ RectTransform:
   m_GameObject: {fileID: 1809473067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 1075105465}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 454.67, y: 216}
+  m_AnchoredPosition: {x: 350, y: 75}
   m_SizeDelta: {x: 217.658, y: 131.187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1809473069
@@ -1284,10 +1287,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _game: {fileID: 407484879}
-  _humansText: {fileID: 949414888}
-  _foodText: {fileID: 1751604069}
-  _woodText: {fileID: 1230590678}
-  _goldText: {fileID: 2105396963}
+  _resourceType: 3
+  _humansText: {fileID: 0}
+  _foodText: {fileID: 0}
+  _woodText: {fileID: 0}
+  _goldText: {fileID: 0}
   _stoneText: {fileID: 1809473070}
 --- !u!114 &1809473070
 MonoBehaviour:
@@ -1414,14 +1418,14 @@ RectTransform:
   m_GameObject: {fileID: 2105396960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 1075105465}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 236.96, y: 216}
+  m_AnchoredPosition: {x: 180, y: 75}
   m_SizeDelta: {x: 217.78, y: 131.187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105396962
@@ -1437,11 +1441,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _game: {fileID: 407484879}
-  _humansText: {fileID: 949414888}
-  _foodText: {fileID: 1751604069}
-  _woodText: {fileID: 1230590678}
+  _resourceType: 4
+  _humansText: {fileID: 0}
+  _foodText: {fileID: 0}
+  _woodText: {fileID: 0}
   _goldText: {fileID: 2105396963}
-  _stoneText: {fileID: 1809473070}
+  _stoneText: {fileID: 0}
 --- !u!114 &2105396963
 MonoBehaviour:
   m_ObjectHideFlags: 0
